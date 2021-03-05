@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #272727;
+}
+
+body {
+  margin: 0;
+}
+
+.alternative-font {
+  font-family: "Shrikhand";
+}
+
+.text-darker {
+  color: #222222;
+}
+
+.site-header {
+  text-align: center;
+}
+.site-header h1 {
+  margin: 0;
+  padding: 10px 0 5px 0;
+}
+.site-header #localisation {
+  background-color: lightgrey;
+  margin: 0;
+  padding: 20px 0;
+  box-shadow: 0 10px 5px -10px grey inset;
+}
+.site-header #jumbotron {
+  background-color: #f6f6f6;
+  padding: 30px;
+}
+.site-header #jumbotron h2 {
+  margin: 0;
+}
+
+/*# sourceMappingURL=build.css.map */

@@ -1,0 +1,22 @@
+@use "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: variables.$main-font, Arial, Helvetica, sans-serif;
+  color: variables.$color-dark;
+}
+
+body {
+  margin: 0;
+}
+
+.alternative-font {
+  font-family: variables.$alternative-font;
+}
+
+.text-darker {
+  color: variables.$color-deep-dark;
+}
