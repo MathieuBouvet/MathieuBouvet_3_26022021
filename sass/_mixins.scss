@@ -1,0 +1,17 @@
+@use "variables";
+
+$gradient-orientation: 355deg;
+$start-offset: 0%;
+$end-offset: 100%;
+
+@mixin main-gradient {
+  background: variables.$color-primary;
+  background: linear-gradient(
+    $gradient-orientation,
+    variables.$color-primary $start-offset,
+    variables.$color-secondary $end-offset
+  );
+}
+
+@mixin shadow {
+}

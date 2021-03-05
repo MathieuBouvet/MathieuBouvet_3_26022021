@@ -2,9 +2,9 @@
   box-sizing: border-box;
 }
 
-html {
+html, button {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  color: #272727;
+  color: #323232;
 }
 
 body {
@@ -16,7 +16,11 @@ body {
 }
 
 .text-darker {
-  color: #222222;
+  color: #272727;
+}
+
+.text-lighter {
+  color: #444444;
 }
 
 .site-header {
@@ -32,12 +36,23 @@ body {
   padding: 20px 0;
   box-shadow: 0 10px 5px -10px grey inset;
 }
+.site-header #localisation-icon {
+  margin-right: 15px;
+}
 .site-header #jumbotron {
   background-color: #f6f6f6;
   padding: 30px;
 }
 .site-header #jumbotron h2 {
   margin: 0;
+}
+.site-header #explore-button {
+  background: #9356dc;
+  background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
 }
 
 /*# sourceMappingURL=build.css.map */

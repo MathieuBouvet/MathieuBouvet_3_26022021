@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-html {
+html, button {
   font-family: variables.$main-font, Arial, Helvetica, sans-serif;
   color: variables.$color-dark;
 }
@@ -18,5 +18,9 @@ body {
 }
 
 .text-darker {
-  color: variables.$color-deep-dark;
+  color: variables.$color-deeper-dark;
+}
+
+.text-lighter {
+  color: variables.$color-lighter-dark
 }
