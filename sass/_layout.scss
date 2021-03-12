@@ -4,3 +4,29 @@
 .site-header {
   text-align: center;
 }
+
+.site-footer {
+  font-size: 0.75rem;
+  background-color: variables.$color-dark;
+  color: white;
+
+  .footer-content {
+    padding: 25px;
+  }
+
+  .footer-items {
+    margin-top: 15px;
+    list-style: none;
+    padding: 0;
+    @include mixins.children-gap-vertical(20px);
+
+    i {
+      margin-right: 4px;
+      width: 15px;
+    }
+    .partenership-icon {
+      transform: scaleX(0.8);
+      transform-origin: left;
+    }
+  }
+}

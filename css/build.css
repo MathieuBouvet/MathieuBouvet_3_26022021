@@ -10,21 +10,13 @@ button {
   font-size: 16px;
 }
 
-body {
+body, h2, figure, ul {
   margin: 0;
 }
 
 h1 {
   margin: 0;
   padding: 10px 0 5px 0;
-}
-
-h2 {
-  margin: 0;
-}
-
-figure {
-  margin: 0;
 }
 
 .alternative-font {
@@ -45,6 +37,38 @@ figure {
 
 .site-header {
   text-align: center;
+}
+
+.site-footer {
+  font-size: 0.75rem;
+  background-color: #353535;
+  color: white;
+}
+.site-footer .footer-content {
+  padding: 25px;
+}
+.site-footer .footer-items {
+  margin-top: 15px;
+  list-style: none;
+  padding: 0;
+}
+.site-footer .footer-items > * {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.site-footer .footer-items > *:first-child {
+  margin-top: 0;
+}
+.site-footer .footer-items > *:last-child {
+  margin-bottom: 0;
+}
+.site-footer .footer-items i {
+  margin-right: 4px;
+  width: 15px;
+}
+.site-footer .footer-items .partenership-icon {
+  transform: scaleX(0.8);
+  transform-origin: left;
 }
 
 #localisation {
