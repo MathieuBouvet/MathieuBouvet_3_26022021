@@ -220,5 +220,22 @@ h1 {
 .restaurant-link .heart-container {
   font-size: 1.5rem;
 }
+.restaurant-link .heart-container .heart-control {
+  display: none;
+}
+.restaurant-link .heart-container .heart {
+  display: none;
+}
+.restaurant-link .heart-container .heart-control:checked + .heart-filled {
+  display: block;
+  background: #9356dc;
+  background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurant-link .heart-container .heart-control:not(:checked) ~ .heart-empty {
+  display: block;
+}
 
 /*# sourceMappingURL=build.css.map */

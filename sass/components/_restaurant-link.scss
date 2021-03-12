@@ -52,5 +52,25 @@
 
   .heart-container {
     font-size: 1.5rem;
+
+    .heart-control {
+      display: none;
+    }
+
+    .heart {
+      display : none;
+    }
+    .heart-control:checked + .heart-filled {
+      display: block;
+      @include mixins.main-gradient();
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .heart-control:not(:checked) ~ .heart-empty {
+      display: block;
+    }
+
+
   }
 }
