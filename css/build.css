@@ -175,8 +175,7 @@ h1 {
 .restaurant {
   border-radius: 10px;
   overflow: hidden;
-  display: block;
-  height: 250px;
+  height: 275px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -195,6 +194,7 @@ h1 {
 }
 .restaurant img {
   object-fit: cover;
+  object-position: center 62%;
   height: 100%;
   width: 100%;
 }
