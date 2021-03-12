@@ -3,36 +3,4 @@
 
 .site-header {
   text-align: center;
-  h1 {
-    margin: 0;
-    padding: 10px 0 5px 0;
-  }
-
-  #localisation {
-    background-color: variables.$color-foundation-2;
-    margin: 0;
-    padding: 20px 0;
-    box-shadow: 0 10px 5px -10px variables.$color-foundation-3 inset;
-  }
-
-  #localisation-icon {
-    margin-right: 15px;
-  }
-
-  #jumbotron {
-    background-color: variables.$color-foundation-1;
-    padding: 30px;
-
-    h2 {
-      margin: 0;
-    }
-  }
-
-  #explore-button {
-    @include mixins.main-gradient;
-    border: none;
-    color: white;
-    padding: 15px;
-    border-radius: 30px;
-  }
 }

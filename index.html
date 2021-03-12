@@ -7,7 +7,6 @@
     <meta name="description" content="Commande de repas en ligne" />
     <meta name="author" content="Ohmyfood" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="./temp-style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
@@ -31,7 +30,7 @@
         Belleville
       </p>
       <article id="jumbotron">
-        <h2>Réservez le menu qui vous convient</h2>
+        <h2 class="text-darker">Réservez le menu qui vous convient</h2>
         <p class="text-lighter">
           Découvrez des restaurants d'exception, séléctionés par nos soins
         </p>
@@ -41,24 +40,24 @@
       </article>
     </header>
     <main>
-      <article id="how-it-works">
-        <h2>Fonctionement</h2>
-        <div class="operation">
-          <span class="operation-index">0</span>
-          <i class="fas fa-mobile-alt"></i>
-          <p class="operation-text">Choisissez un restaurant</p>
-        </div>
+      <section id="how-it-works">
+        <h2 class="text-darker">Fonctionement</h2>
         <div class="operation">
           <span class="operation-index">1</span>
-          <i class="fas fa-list-ul"></i>
-          <p class="operation-text">Composez votre menu</p>
+          <i class="fas fa-mobile-alt text-lightest"></i>
+          <p class="operation-text text-darker">Choisissez un restaurant</p>
         </div>
         <div class="operation">
           <span class="operation-index">2</span>
-          <i class="fas fa-store"></i>
-          <p class="operation-text">Dégustez au restaurant</p>
+          <i class="fas fa-list-ul text-lightest"></i>
+          <p class="operation-text text-darker">Composez votre menu</p>
         </div>
-      </article>
+        <div class="operation">
+          <span class="operation-index">3</span>
+          <i class="fas fa-store text-lightest"></i>
+          <p class="operation-text text-darker">Dégustez au restaurant</p>
+        </div>
+      </section>
       <article id="restaurants">
         <h2>Restaurants</h2>
         <a href="./pages/la-palette-du-gout.html" class="restaurant-link">
@@ -69,8 +68,13 @@
             />
             <div class="new-info">Nouveau</div>
             <figcaption>
-              <h3>La palette du goût</h3>
-              <p>Ménilmontant</p>
+              <div>
+                <h3 class="text-darker">La palette du goût</h3>
+                <p>Ménilmontant</p>
+              </div>
+              <div class="heart-container text-lighter">
+                <i class="far fa-heart"></i>
+              </div>
             </figcaption>
           </figure>
         </a>
@@ -82,8 +86,13 @@
             />
             <div class="new-info">Nouveau</div>
             <figcaption>
-              <h3>La note enchantée</h3>
-              <p>Charonne</p>
+              <div>
+                <h3 class="text-darker">La note enchantée</h3>
+                <p>Charonne</p>
+              </div>
+              <div class="heart-container text-lighter">
+                <i class="far fa-heart"></i>
+              </div>
             </figcaption>
           </figure>
         </a>
@@ -94,8 +103,13 @@
               alt="plat gastronomique vu de face"
             />
             <figcaption>
-              <h3>À la française</h3>
-              <p>Cité Rouge</p>
+              <div>
+                <h3 class="text-darker">À la française</h3>
+                <p>Cité Rouge</p>
+              </div>
+              <div class="heart-container text-lighter">
+                <i class="far fa-heart"></i>
+              </div>
             </figcaption>
           </figure>
         </a>
@@ -106,8 +120,13 @@
               alt="plat gastronomique dans une assiette rectangulaire"
             />
             <figcaption>
-              <h3>Le délice des sens</h3>
-              <p>Folie-Méricourt</p>
+              <div>
+                <h3 class="text-darker">Le délice des sens</h3>
+                <p>Folie-Méricourt</p>
+              </div>
+              <div class="heart-container text-lighter">
+                <i class="far fa-heart"></i>
+              </div>
             </figcaption>
           </figure>
         </a>

@@ -1,0 +1,43 @@
+@use "../variables";
+@use "../mixins";
+
+$badgeSize: 22px;
+
+.operation {
+  display: flex;
+  align-items: center;
+  background-color: variables.$color-foundation-1;
+  border-radius: 15px;
+  margin-left: $badgeSize/2;
+  @include mixins.card-shadow;
+  @include mixins.children-gap-horizontal(25px);
+  padding: 12px 0;
+
+  .operation-index {
+    width: $badgeSize;
+    height: $badgeSize;
+    border-radius: 100%;
+    background-color: variables.$color-primary;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-$badgeSize/2);
+    margin-right: 0;
+    font-size: 0.7rem;
+    padding-top: 1px;
+  }
+
+  .operation-text {
+    font-weight: bold;
+    font-size: 0.85rem;
+  }
+
+  &:hover {
+    background-color: variables.$color-primary-light;
+
+    i {
+      color: variables.$color-primary;
+    }
+  }
+}

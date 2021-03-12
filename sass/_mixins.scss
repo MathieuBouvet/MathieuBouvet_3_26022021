@@ -14,4 +14,34 @@ $end-offset: 100%;
 }
 
 @mixin shadow {
+  box-shadow: 0 5px 20px -10px variables.$color-lighter-dark;
+}
+@mixin card-shadow {
+  box-shadow: 0 5px 15px -5px rgba(variables.$color-lighter-dark, 0.2);
+}
+
+@mixin children-gap-horizontal($gap) {
+  & > * {
+    margin-left: $gap/2;
+    margin-right: $gap/2;
+  }
+  & > *:first-child {
+    margin-left: 0;
+  }
+  & > *:last-child {
+    margin-right: 0;
+  }
+}
+
+@mixin children-gap-vertical($gap) {
+  & > * {
+    margin-top: $gap/2;
+    margin-bottom: $gap/2;
+  }
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 }

@@ -1,0 +1,42 @@
+@use "../variables";
+@use "../mixins";
+
+#localisation {
+  background-color: variables.$color-foundation-2;
+  margin: 0;
+  padding: 18px 0;
+  box-shadow: 0 10px 5px -10px variables.$color-foundation-3 inset;
+}
+
+#localisation-icon {
+  margin-right: 15px;
+}
+
+#jumbotron {
+  background-color: variables.$color-foundation-1;
+  padding: 35px;
+
+  
+}
+
+#explore-button {
+  @include mixins.main-gradient;
+  @include mixins.shadow;
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+#how-it-works {
+  padding: 50px 20px;
+  @include mixins.children-gap-vertical(50px);
+}
+
+#restaurants {
+  padding: 50px 20px;
+  background-color: variables.$color-foundation-1;
+  @include mixins.children-gap-vertical(50px);
+}
