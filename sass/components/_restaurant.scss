@@ -1,21 +1,15 @@
 @use "../variables";
 @use "../mixins";
 
-.restaurant-link {
-  color: inherit;
-  text-decoration: none;
+.restaurant {
   border-radius: 10px;
   overflow: hidden;
   display: block;
   height: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   @include mixins.card-shadow();
-
-  figure {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
 
   .new-info {
     position: absolute;
@@ -32,14 +26,12 @@
   img {
     object-fit: cover;
     height: 100%;
-    flex: 1 1 auto;
-    overflow: hidden;
+    width: 100%;
   }
 
   figcaption {
     flex: 0 0 auto;
     display: flex;
-    justify-content: space-between;
     padding: 15px 15px 15px 10px;
     h3 {
       margin: 0;
@@ -48,6 +40,16 @@
     p {
       margin: 0;
     }
+  }
+  .restaurant-image-link {
+    flex: 1 1 auto;
+    height: 100%;
+    overflow: hidden;
+  }
+  .restaurant-text-link {
+    color: inherit;
+    text-decoration: none;
+    flex: 1 1 auto;
   }
 
   .heart-container {
@@ -58,19 +60,16 @@
     }
 
     .heart {
-      display : none;
+      display: none;
     }
     .heart-control:checked + .heart-filled {
       display: block;
       @include mixins.main-gradient();
       -webkit-background-clip: text;
-      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .heart-control:not(:checked) ~ .heart-empty {
       display: block;
     }
-
-
   }
 }

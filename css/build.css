@@ -172,22 +172,17 @@ h1 {
   color: #9356dc;
 }
 
-.restaurant-link {
-  color: inherit;
-  text-decoration: none;
+.restaurant {
   border-radius: 10px;
   overflow: hidden;
   display: block;
   height: 250px;
-  box-shadow: 0 5px 15px -5px rgba(68, 68, 68, 0.2);
-}
-.restaurant-link figure {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  box-shadow: 0 5px 15px -5px rgba(68, 68, 68, 0.2);
 }
-.restaurant-link .new-info {
+.restaurant .new-info {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -198,43 +193,50 @@ h1 {
   letter-spacing: 0;
   padding: 5px 8px;
 }
-.restaurant-link img {
+.restaurant img {
   object-fit: cover;
   height: 100%;
-  flex: 1 1 auto;
-  overflow: hidden;
+  width: 100%;
 }
-.restaurant-link figcaption {
+.restaurant figcaption {
   flex: 0 0 auto;
   display: flex;
-  justify-content: space-between;
   padding: 15px 15px 15px 10px;
 }
-.restaurant-link figcaption h3 {
+.restaurant figcaption h3 {
   margin: 0;
   margin-bottom: 5px;
 }
-.restaurant-link figcaption p {
+.restaurant figcaption p {
   margin: 0;
 }
-.restaurant-link .heart-container {
+.restaurant .restaurant-image-link {
+  flex: 1 1 auto;
+  height: 100%;
+  overflow: hidden;
+}
+.restaurant .restaurant-text-link {
+  color: inherit;
+  text-decoration: none;
+  flex: 1 1 auto;
+}
+.restaurant .heart-container {
   font-size: 1.5rem;
 }
-.restaurant-link .heart-container .heart-control {
+.restaurant .heart-container .heart-control {
   display: none;
 }
-.restaurant-link .heart-container .heart {
+.restaurant .heart-container .heart {
   display: none;
 }
-.restaurant-link .heart-container .heart-control:checked + .heart-filled {
+.restaurant .heart-container .heart-control:checked + .heart-filled {
   display: block;
   background: #9356dc;
   background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurant-link .heart-container .heart-control:not(:checked) ~ .heart-empty {
+.restaurant .heart-container .heart-control:not(:checked) ~ .heart-empty {
   display: block;
 }
 
