@@ -60,16 +60,30 @@
     }
 
     .heart {
-      display: none;
+      &::before {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+      }
     }
-    .heart-control:checked + .heart-filled {
-      display: block;
+    .heart-control:checked + .heart {
       @include mixins.main-gradient();
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f004";
+      }
     }
-    .heart-control:not(:checked) ~ .heart-empty {
-      display: block;
+    .heart-control:not(:checked) ~ .heart {
+      &::before {
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 400;
+        content: "\f004";
+      }
     }
   }
 }
