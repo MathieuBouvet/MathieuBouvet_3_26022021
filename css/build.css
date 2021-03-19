@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -10,7 +11,12 @@ button {
   font-size: 16px;
 }
 
-body, h2, figure, ul {
+body,
+h2,
+h3,
+h4,
+figure,
+ul {
   margin: 0;
 }
 
@@ -21,6 +27,7 @@ h1 {
 
 .alternative-font {
   font-family: "Shrikhand";
+  letter-spacing: 0.7px;
 }
 
 .text-darker {
@@ -128,6 +135,96 @@ h1 {
   margin-bottom: 0;
 }
 
+.restaurant-page {
+  background-color: #f6f6f6;
+  padding-bottom: 25px;
+}
+
+.restaurant-page-header {
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.restaurant-page-header .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: white;
+  box-shadow: 0 5px 20px -10px #444444;
+}
+.restaurant-page-header .top-bar::after {
+  content: " ";
+  width: 20px;
+  height: 1px;
+}
+.restaurant-page-header .top-bar .go-back-link {
+  width: 20px;
+  font-size: 1.2rem;
+  margin-top: 8px;
+}
+.restaurant-page-header.restaurant-img-a-la-francaise {
+  background-image: url("../images/a-la-francaise.jpg");
+}
+.restaurant-page-header.restaurant-img-note-enchantee {
+  background-image: url("../images/note-enchantee.jpg");
+}
+.restaurant-page-header.restaurant-img-palette-du-gout {
+  background-image: url("../images/palette-du-gout.jpg");
+}
+.restaurant-page-header.restaurant-img-delice-des-sens {
+  background-image: url("../images/delice-des-sens.jpg");
+}
+
+.restaurant-full {
+  background-color: #f6f6f6;
+  transform: translateY(-38px);
+  padding: 30px 15px 0 15px;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+}
+
+.choice-container {
+  margin-top: 35px;
+}
+.choice-container > * {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.choice-container > *:first-child {
+  margin-top: 0;
+}
+.choice-container > *:last-child {
+  margin-bottom: 0;
+}
+.choice-container .dish-type-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-left: 5px;
+}
+.choice-container .dish-type-title::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: #99E2D0;
+  display: block;
+}
+
+.order-button {
+  background: #9356dc;
+  background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
+  box-shadow: 0 5px 20px -10px #444444;
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin: 15px 0;
+  display: block;
+  margin: 50px auto 0 auto;
+}
+
 .operation {
   display: flex;
   align-items: center;
@@ -226,18 +323,61 @@ h1 {
 .restaurant .heart-container .heart-control {
   display: none;
 }
-.restaurant .heart-container .heart {
-  display: none;
+.restaurant .heart-container .heart::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
-.restaurant .heart-container .heart-control:checked + .heart-filled {
-  display: block;
+.restaurant .heart-container .heart-control:checked + .heart {
   background: #9356dc;
   background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurant .heart-container .heart-control:not(:checked) ~ .heart-empty {
-  display: block;
+.restaurant .heart-container .heart-control:checked + .heart::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+}
+.restaurant .heart-container .heart-control:not(:checked) ~ .heart::before {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  content: "";
+}
+
+.dish {
+  box-shadow: 0 5px 15px -5px rgba(68, 68, 68, 0.2);
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.dish .dish-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+.dish .dish-info {
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.dish .dish-description-container {
+  display: flex;
+  justify-content: space-between;
+}
+.dish .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+.dish .price {
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=build.css.map */

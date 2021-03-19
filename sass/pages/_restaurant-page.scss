@@ -1,0 +1,74 @@
+@use "../variables";
+@use "../mixins";
+
+$menuItemsWidth: 20px;
+$restaurant-names: "a-la-francaise", "note-enchantee", "palette-du-gout", "delice-des-sens";
+$articleRadius: 38px;
+
+.restaurant-page {
+  background-color: variables.$color-foundation-1;
+  padding-bottom: 25px;
+}
+
+.restaurant-page-header {
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: white;
+    @include mixins.shadow();
+
+    &::after {
+      content: " ";
+      width: $menuItemsWidth;
+      height: 1px;
+    }
+
+    .go-back-link {
+      width: $menuItemsWidth;
+      font-size: 1.2rem;
+      margin-top: 8px;
+    }
+  }
+  @each $name in $restaurant-names {
+    &.restaurant-img-#{$name} {
+      background-image: url("../images/#{$name}.jpg");
+    }
+  }
+}
+
+.restaurant-full {
+  background-color: variables.$color-foundation-1;
+  transform: translateY(-$articleRadius);
+  padding: $articleRadius - 8px 15px 0 15px;
+  border-top-left-radius: $articleRadius;
+  border-top-right-radius: $articleRadius;
+}
+
+.choice-container {
+  margin-top: 35px;
+  @include mixins.children-gap-vertical(30px);
+  .dish-type-title {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-left: 5px;
+    &::after {
+      content:"";
+      width: 50px;
+      height: 2px;
+      background-color: variables.$color-tertiary;
+      display: block;
+    }
+  }
+}
+
+.order-button {
+  @include mixins.main-button();
+  display: block;
+  margin: 50px auto 0 auto;
+}

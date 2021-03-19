@@ -1,0 +1,36 @@
+@use "../variables";
+@use "../mixins";
+
+.dish {
+  @include mixins.card-shadow();
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+
+  .dish-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  .dish-info {
+    flex: 1 1 auto;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .dish-description-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+  .price {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+}

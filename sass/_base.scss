@@ -12,7 +12,12 @@ button {
   font-size: 16px;
 }
 
-body, h2, figure, ul {
+body,
+h2,
+h3,
+h4,
+figure,
+ul {
   margin: 0;
 }
 
@@ -23,6 +28,7 @@ h1 {
 
 .alternative-font {
   font-family: variables.$alternative-font;
+  letter-spacing: 0.7px;
 }
 
 .text-darker {

@@ -45,3 +45,14 @@ $end-offset: 100%;
     margin-bottom: 0;
   }
 }
+
+@mixin main-button(){
+  @include main-gradient;
+  @include shadow;
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin: 15px 0;
+}

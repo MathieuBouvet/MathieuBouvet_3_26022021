@@ -20,14 +20,7 @@
 }
 
 #explore-button {
-  @include mixins.main-gradient;
-  @include mixins.shadow;
-  border: none;
-  color: white;
-  padding: 15px;
-  border-radius: 30px;
-  font-weight: bold;
-  margin: 15px 0;
+  @include mixins.main-button;
 }
 
 #how-it-works {
