@@ -353,7 +353,7 @@ h1 {
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  overflow: hidden;
 }
 .dish .dish-title {
   overflow: hidden;
@@ -365,6 +365,7 @@ h1 {
   flex: 1 1 auto;
   white-space: nowrap;
   overflow: hidden;
+  margin: 15px;
 }
 .dish .dish-description-container {
   display: flex;
@@ -378,6 +379,19 @@ h1 {
 .dish .price {
   font-weight: bold;
   margin-left: 10px;
+}
+.dish .dish-selection-marker {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  color: white;
+  width: 0;
+  font-size: 1.1rem;
+}
+.dish:hover .dish-selection-marker {
+  width: 65px;
 }
 
 /*# sourceMappingURL=build.css.map */
