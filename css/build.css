@@ -621,22 +621,20 @@ h1 {
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-}
-.heart-container .heart-control:checked + .heart {
-  background: #9356dc;
-  background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: "Font Awesome 5 Free";
+  content: "";
 }
 .heart-container .heart-control:checked + .heart::before {
-  font-family: "Font Awesome 5 Free";
+  color: #ff79da;
   font-weight: 900;
-  content: "";
 }
-.heart-container .heart-control:not(:checked) ~ .heart::before {
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 400;
-  content: "";
+@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+  .heart-container .heart-control:checked + .heart::before {
+    background: #9356dc;
+    background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 /*# sourceMappingURL=build.css.map */

@@ -16,23 +16,19 @@
       font-variant: normal;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
+      font-family: "Font Awesome 5 Free";
+      content: "\f004";
     }
   }
   .heart-control:checked + .heart {
-    @include mixins.main-gradient();
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     &::before {
-      font-family: "Font Awesome 5 Free";
+      @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent){
+        @include mixins.main-gradient();
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      color: variables.$color-secondary;
       font-weight: 900;
-      content: "\f004";
-    }
-  }
-  .heart-control:not(:checked) ~ .heart {
-    &::before {
-      font-family: "Font Awesome 5 Pro";
-      font-weight: 400;
-      content: "\f004";
     }
   }
 }
