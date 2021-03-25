@@ -48,6 +48,13 @@ $articleRadius: 38px;
   padding: $articleRadius - 8px 15px 0 15px;
   border-top-left-radius: $articleRadius;
   border-top-right-radius: $articleRadius;
+
+  .restaurant-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 5px;
+  }
 }
 
 .choice-container {

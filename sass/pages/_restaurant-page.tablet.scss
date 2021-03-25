@@ -40,10 +40,10 @@
     background-color: transparent;
     padding: 50px;
 
-    h2 {
+    .restaurant-title-container {
       background-color: variables.$color-foundation-1;
       border-radius: 15px;
-      padding: 25px 35px;
+      padding: 25px 54px 25px 42px;
       @include mixins.shadow();
     }
   }

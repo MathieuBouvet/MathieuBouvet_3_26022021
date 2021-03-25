@@ -286,6 +286,12 @@ h1 {
   border-top-left-radius: 38px;
   border-top-right-radius: 38px;
 }
+.restaurant-full .restaurant-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 5px;
+}
 
 .choice-container {
   margin-top: 35px;
@@ -383,10 +389,10 @@ h1 {
     background-color: transparent;
     padding: 50px;
   }
-  .restaurant-full h2 {
+  .restaurant-full .restaurant-title-container {
     background-color: #f6f6f6;
     border-radius: 15px;
-    padding: 25px 35px;
+    padding: 25px 54px 25px 42px;
     box-shadow: 0 5px 20px -10px #444444;
   }
 
@@ -547,38 +553,6 @@ h1 {
   text-decoration: none;
   flex: 1 1 auto;
 }
-.restaurant .heart-container {
-  font-size: 1.5rem;
-}
-.restaurant .heart-container .heart-control {
-  display: none;
-}
-.restaurant .heart-container .heart {
-  cursor: pointer;
-}
-.restaurant .heart-container .heart::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-}
-.restaurant .heart-container .heart-control:checked + .heart {
-  background: #9356dc;
-  background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.restaurant .heart-container .heart-control:checked + .heart::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "";
-}
-.restaurant .heart-container .heart-control:not(:checked) ~ .heart::before {
-  font-family: "Font Awesome 5 Pro";
-  font-weight: 400;
-  content: "";
-}
 
 @media screen and (min-width: 600px) {
   .restaurant {
@@ -630,6 +604,39 @@ h1 {
 }
 .dish:hover .dish-selection-marker {
   width: 65px;
+}
+
+.heart-container {
+  font-size: 1.5rem;
+}
+.heart-container .heart-control {
+  display: none;
+}
+.heart-container .heart {
+  cursor: pointer;
+}
+.heart-container .heart::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.heart-container .heart-control:checked + .heart {
+  background: #9356dc;
+  background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart-container .heart-control:checked + .heart::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+}
+.heart-container .heart-control:not(:checked) ~ .heart::before {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  content: "";
 }
 
 /*# sourceMappingURL=build.css.map */

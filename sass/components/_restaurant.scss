@@ -52,41 +52,6 @@
     flex: 1 1 auto;
   }
 
-  .heart-container {
-    font-size: 1.5rem;
-
-    .heart-control {
-      display: none;
-    }
-
-    .heart {
-      cursor: pointer;
-      &::before {
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-      }
-    }
-    .heart-control:checked + .heart {
-      @include mixins.main-gradient();
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      &::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f004";
-      }
-    }
-    .heart-control:not(:checked) ~ .heart {
-      &::before {
-        font-family: "Font Awesome 5 Pro";
-        font-weight: 400;
-        content: "\f004";
-      }
-    }
-  }
 }
 
 @include mixins.at-least-tablet() {
