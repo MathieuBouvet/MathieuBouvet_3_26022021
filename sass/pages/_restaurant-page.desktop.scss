@@ -1,0 +1,24 @@
+@use "../variables";
+@use "../mixins";
+
+@include mixins.desktop-only() {
+  .restaurant-page-header {
+    .top-bar {
+      max-width: variables.$content-maw-width;
+      margin: auto;
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+  .restaurant-full {
+    max-width: variables.$content-maw-width;
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+
+  }
+  .footer-content {
+    max-width: variables.$content-maw-width;
+    margin: auto;
+  }
+}

@@ -398,6 +398,26 @@ h1 {
     box-shadow: 0 5px 20px -10px #444444;
   }
 }
+@media screen and (min-width: 1000px) {
+  .restaurant-page-header .top-bar {
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .restaurant-full {
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-content {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
 .operation {
   display: flex;
   align-items: center;
