@@ -1,0 +1,58 @@
+@use "../variables";
+@use "../mixins";
+
+@include mixins.at-least-tablet() {
+  .restaurant-page-header {
+    height: auto;
+    @each $name in variables.$restaurant-names {
+      &.restaurant-img-#{$name} {
+        background-image: none;
+      }
+    }
+  }
+
+  .restaurant-page {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      filter: blur(2px);
+      transform: scale(1.1);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  @each $name in variables.$restaurant-names {
+    .restaurant-img-#{$name}::before {
+      background-image: url("../images/#{$name}.jpg");
+    }
+  }
+
+  .restaurant-full {
+    transform: translateY(0);
+    background-color: transparent;
+    padding: 50px;
+
+    h2 {
+      background-color: variables.$color-foundation-1;
+      border-radius: 15px;
+      padding: 25px 35px;
+      @include mixins.shadow();
+    }
+  }
+
+  .choice-container {
+    background-color: variables.$color-foundation-1;
+    padding: 35px;
+    border-radius: 15px;
+    margin-top: 50px;
+    @include mixins.shadow();
+  }
+}

@@ -327,6 +327,77 @@ h1 {
   margin: 50px auto 0 auto;
 }
 
+@media screen and (min-width: 600px) {
+  .restaurant-page-header {
+    height: auto;
+  }
+  .restaurant-page-header.restaurant-img-a-la-francaise {
+    background-image: none;
+  }
+  .restaurant-page-header.restaurant-img-note-enchantee {
+    background-image: none;
+  }
+  .restaurant-page-header.restaurant-img-palette-du-gout {
+    background-image: none;
+  }
+  .restaurant-page-header.restaurant-img-delice-des-sens {
+    background-image: none;
+  }
+
+  .restaurant-page {
+    position: relative;
+    overflow: hidden;
+  }
+  .restaurant-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    transform: scale(1.1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .restaurant-img-a-la-francaise::before {
+    background-image: url("../images/a-la-francaise.jpg");
+  }
+
+  .restaurant-img-note-enchantee::before {
+    background-image: url("../images/note-enchantee.jpg");
+  }
+
+  .restaurant-img-palette-du-gout::before {
+    background-image: url("../images/palette-du-gout.jpg");
+  }
+
+  .restaurant-img-delice-des-sens::before {
+    background-image: url("../images/delice-des-sens.jpg");
+  }
+
+  .restaurant-full {
+    transform: translateY(0);
+    background-color: transparent;
+    padding: 50px;
+  }
+  .restaurant-full h2 {
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    padding: 25px 35px;
+    box-shadow: 0 5px 20px -10px #444444;
+  }
+
+  .choice-container {
+    background-color: #f6f6f6;
+    padding: 35px;
+    border-radius: 15px;
+    margin-top: 50px;
+    box-shadow: 0 5px 20px -10px #444444;
+  }
+}
 .operation {
   display: flex;
   align-items: center;
@@ -461,6 +532,9 @@ h1 {
 }
 .restaurant .heart-container .heart-control {
   display: none;
+}
+.restaurant .heart-container .heart {
+  cursor: pointer;
 }
 .restaurant .heart-container .heart::before {
   display: inline-block;

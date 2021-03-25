@@ -2,7 +2,6 @@
 @use "../mixins";
 
 $menuItemsWidth: 20px;
-$restaurant-names: "a-la-francaise", "note-enchantee", "palette-du-gout", "delice-des-sens";
 $articleRadius: 38px;
 
 .restaurant-page {
@@ -35,12 +34,13 @@ $articleRadius: 38px;
       margin-top: 8px;
     }
   }
-  @each $name in $restaurant-names {
+  @each $name in variables.$restaurant-names {
     &.restaurant-img-#{$name} {
       background-image: url("../images/#{$name}.jpg");
     }
   }
 }
+
 
 .restaurant-full {
   background-color: variables.$color-foundation-1;
