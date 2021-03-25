@@ -2,6 +2,7 @@
 @use "../mixins";
 
 $badgeSize: 22px;
+$badgeSizeTablet: 32px;
 
 .operation {
   display: flex;
@@ -38,6 +39,32 @@ $badgeSize: 22px;
 
     i {
       color: variables.$color-primary;
+    }
+  }
+}
+
+@include mixins.at-least-tablet(){
+  .operation {
+    position: relative;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    @include mixins.children-no-gap();
+    @include mixins.children-gap-vertical(25px);
+
+    .operation-index {
+      position: absolute;
+      transform: translateX(0);
+      width: $badgeSizeTablet;
+      height: $badgeSizeTablet;
+      bottom: -$badgeSizeTablet;
+      font-size: 1.05rem;
+    }
+
+    .operation-text {
+      text-align: center;
+      font-size: 1rem;
     }
   }
 }

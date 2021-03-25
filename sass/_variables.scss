@@ -3,7 +3,7 @@ $alternative-font: "Shrikhand";
 
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
-$color-tertiary: #99E2D0;
+$color-tertiary: #99e2d0;
 
 $color-primary-light: #f5edff;
 
@@ -16,3 +16,7 @@ $color-dark: #353535;
 $color-lighter-dark: #444444;
 $color-lightest-dark: #7e7e7e;
 
+$breakpoints: (
+  tablet: 600px,
+  desktop: 1000px,
+);

@@ -46,7 +46,16 @@ $end-offset: 100%;
   }
 }
 
-@mixin main-button(){
+@mixin children-no-gap() {
+  & > * {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}
+
+@mixin main-button() {
   @include main-gradient;
   @include shadow;
   border: none;
@@ -55,4 +64,22 @@ $end-offset: 100%;
   border-radius: 30px;
   font-weight: bold;
   margin: 15px 0;
+}
+
+@mixin at-least-tablet() {
+  @media screen and (min-width: map-get(variables.$breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin tablet-only() {
+  @media screen and (min-width: map-get(variables.$breakpoints, tablet)) and (max-width: map-get(variables.$breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin desktop-only() {
+  @media screen and (min-width: map-get(variables.$breakpoints, desktop)) {
+    @content;
+  }
 }

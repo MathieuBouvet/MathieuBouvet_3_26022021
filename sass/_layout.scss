@@ -30,3 +30,24 @@
     }
   }
 }
+
+@include mixins.at-least-tablet() {
+  .site-footer {
+    .footer-content {
+      display: flex;
+      justify-content: center;
+      @include mixins.children-gap-horizontal(20px);
+
+    }
+    .footer-items {
+      display: flex;
+      margin-top: 0;
+      align-items: center;
+      @include mixins.children-no-gap();
+      @include mixins.children-gap-horizontal(20px);
+
+      list-style: circle;
+    }
+
+  }
+}

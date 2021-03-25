@@ -87,3 +87,9 @@
     }
   }
 }
+
+@include mixins.at-least-tablet() {
+  .restaurant {
+    width: 285px;
+  }
+}

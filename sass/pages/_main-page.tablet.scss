@@ -1,0 +1,33 @@
+@use "../variables";
+@use "../mixins";
+
+@include mixins.at-least-tablet() {
+  #how-it-works {
+    .operation-container {
+      @include mixins.children-no-gap();
+      @include mixins.children-gap-horizontal(35px);
+      display: flex;
+      justify-content: center;
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+
+  #restaurants {
+    h2 {
+      text-align: center
+    }
+    .restaurant-container {
+      @include mixins.children-no-gap();
+      margin: -17.5px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      & > *, & > :first-child {
+        margin: 17.5px;
+      }
+    }
+  }
+}

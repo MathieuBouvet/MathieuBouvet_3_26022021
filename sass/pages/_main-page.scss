@@ -15,8 +15,6 @@
 #jumbotron {
   background-color: variables.$color-foundation-1;
   padding: 35px;
-
-  
 }
 
 #explore-button {
@@ -26,10 +24,19 @@
 #how-it-works {
   padding: 50px 20px;
   @include mixins.children-gap-vertical(50px);
+
+  .operation-container {
+    @include mixins.children-gap-vertical(50px);
+  }
 }
 
 #restaurants {
   padding: 50px 20px;
   background-color: variables.$color-foundation-1;
   @include mixins.children-gap-vertical(50px);
+
+  .restaurant-container {
+    @include mixins.children-gap-vertical(50px);
+
+  }
 }
