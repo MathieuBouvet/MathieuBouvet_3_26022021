@@ -31,7 +31,7 @@
   }
   @each $name in variables.$restaurant-names {
     .restaurant-img-#{$name}::before {
-      background-image: url("../images/#{$name}.jpg");
+      background-image: url("../images/#{$name}-medium.jpg");
     }
   }
 

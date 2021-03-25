@@ -267,16 +267,16 @@ h1 {
   margin-top: 8px;
 }
 .restaurant-page-header.restaurant-img-a-la-francaise {
-  background-image: url("../images/a-la-francaise.jpg");
+  background-image: url("../images/a-la-francaise-small.jpg");
 }
 .restaurant-page-header.restaurant-img-note-enchantee {
-  background-image: url("../images/note-enchantee.jpg");
+  background-image: url("../images/note-enchantee-small.jpg");
 }
 .restaurant-page-header.restaurant-img-palette-du-gout {
-  background-image: url("../images/palette-du-gout.jpg");
+  background-image: url("../images/palette-du-gout-small.jpg");
 }
 .restaurant-page-header.restaurant-img-delice-des-sens {
-  background-image: url("../images/delice-des-sens.jpg");
+  background-image: url("../images/delice-des-sens-small.jpg");
 }
 
 .restaurant-full {
@@ -363,19 +363,19 @@ h1 {
   }
 
   .restaurant-img-a-la-francaise::before {
-    background-image: url("../images/a-la-francaise.jpg");
+    background-image: url("../images/a-la-francaise-medium.jpg");
   }
 
   .restaurant-img-note-enchantee::before {
-    background-image: url("../images/note-enchantee.jpg");
+    background-image: url("../images/note-enchantee-medium.jpg");
   }
 
   .restaurant-img-palette-du-gout::before {
-    background-image: url("../images/palette-du-gout.jpg");
+    background-image: url("../images/palette-du-gout-medium.jpg");
   }
 
   .restaurant-img-delice-des-sens::before {
-    background-image: url("../images/delice-des-sens.jpg");
+    background-image: url("../images/delice-des-sens-medium.jpg");
   }
 
   .restaurant-full {
