@@ -216,7 +216,7 @@ h1 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  animation: hide 1s forwards 0s;
+  animation: hide 1s forwards 3s;
 }
 
 @keyframes hide {
