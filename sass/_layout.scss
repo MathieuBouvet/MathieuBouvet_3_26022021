@@ -29,6 +29,15 @@
       transform-origin: left;
     }
   }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 @include mixins.at-least-tablet() {
