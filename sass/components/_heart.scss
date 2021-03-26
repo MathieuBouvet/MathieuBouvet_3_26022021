@@ -22,11 +22,7 @@
   }
   .heart-control:checked + .heart {
     &::before {
-      @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent){
-        @include mixins.main-gradient();
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+      @include mixins.text-main-gradient();
       color: variables.$color-secondary;
       font-weight: 900;
     }

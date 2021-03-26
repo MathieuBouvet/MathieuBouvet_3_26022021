@@ -37,6 +37,26 @@
 
   .restaurant-container {
     @include mixins.children-gap-vertical(50px);
+  }
+}
 
+#loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: variables.$color-foundation-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: hide 1s forwards 3s;
+}
+
+@keyframes hide {
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
   }
 }

@@ -133,7 +133,6 @@ h1 {
 }
 
 #explore-button {
-  background: #9356dc;
   background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
   box-shadow: 0 5px 20px -10px #444444;
   border: none;
@@ -193,6 +192,26 @@ h1 {
   margin-bottom: 0;
 }
 
+#loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: hide 1s forwards 3s;
+}
+
+@keyframes hide {
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
 @media screen and (min-width: 600px) {
   #how-it-works .operation-container {
     display: flex;
@@ -320,7 +339,6 @@ h1 {
 }
 
 .order-button {
-  background: #9356dc;
   background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
   box-shadow: 0 5px 20px -10px #444444;
   border: none;
@@ -630,10 +648,59 @@ h1 {
 }
 @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
   .heart-container .heart-control:checked + .heart::before {
-    background: #9356dc;
     background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+.loader {
+  display: flex;
+}
+.loader::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #ff79da;
+  margin: auto;
+  display: block;
+  border-radius: 50%;
+  animation: grow-and-shrink 1.5s infinite 0.75s;
+}
+.loader .loading-text {
+  font-size: 1.5rem;
+  position: relative;
+  margin: 10px;
+}
+.loader .loading-text::before {
+  content: attr(data-content);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #ff79da;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  animation: reveal-box 1.5s infinite;
+}
+@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+  .loader .loading-text::before {
+    background: linear-gradient(355deg, #9356dc 0%, #ff79da 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes reveal-box {
+  40%, 50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  75%, 100% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+}
+@keyframes grow-and-shrink {
+  50% {
+    background-color: #9356dc;
+    transform: scale(0.3);
   }
 }
 

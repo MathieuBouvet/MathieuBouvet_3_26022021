@@ -5,7 +5,6 @@ $start-offset: 0%;
 $end-offset: 100%;
 
 @mixin main-gradient {
-  background: variables.$color-primary;
   background: linear-gradient(
     $gradient-orientation,
     variables.$color-primary $start-offset,
@@ -81,5 +80,13 @@ $end-offset: 100%;
 @mixin desktop-only() {
   @media screen and (min-width: map-get(variables.$breakpoints, desktop)) {
     @content;
+  }
+}
+
+@mixin text-main-gradient(){
+  @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent){
+    @include main-gradient();
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
