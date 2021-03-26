@@ -12,8 +12,19 @@ $end-offset: 100%;
   );
 }
 
+@mixin main-gradient-lighter {
+  background: linear-gradient(
+    $gradient-orientation,
+    lighten(variables.$color-primary, 3%) $start-offset,
+    lighten(variables.$color-secondary, 3%) $end-offset,
+  );
+}
+
 @mixin shadow {
   box-shadow: 0 5px 20px -10px variables.$color-lighter-dark;
+}
+@mixin shadow-spreaded {
+  box-shadow: 0 5px 20px -5px variables.$color-lighter-dark;
 }
 @mixin card-shadow {
   box-shadow: 0 5px 15px -5px rgba(variables.$color-lighter-dark, 0.2);
@@ -63,6 +74,12 @@ $end-offset: 100%;
   border-radius: 30px;
   font-weight: bold;
   margin: 15px 0;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+  &:hover {
+    @include main-gradient-lighter;
+    @include shadow-spreaded;
+  }
 }
 
 @mixin at-least-tablet() {
@@ -83,8 +100,9 @@ $end-offset: 100%;
   }
 }
 
-@mixin text-main-gradient(){
-  @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent){
+@mixin text-main-gradient() {
+  @supports (-webkit-background-clip: text) and
+    (-webkit-text-fill-color: transparent) {
     @include main-gradient();
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
