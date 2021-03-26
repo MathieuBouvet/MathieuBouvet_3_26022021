@@ -664,8 +664,8 @@ h1 {
 .heart-container .heart-control:checked + .heart::before {
   color: #ff79da;
   font-weight: 900;
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-  animation: fill 0.7s forwards;
+  transform: scale(0);
+  animation: fill 0.3s forwards cubic-bezier(0.2, 0.1, 0.55, 1.54);
 }
 @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
   .heart-container .heart-control:checked + .heart::before {
@@ -677,7 +677,7 @@ h1 {
 
 @keyframes fill {
   to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1);
   }
 }
 .loader {
@@ -691,12 +691,13 @@ h1 {
   margin: auto;
   display: block;
   border-radius: 50%;
-  animation: grow-and-shrink 1.5s infinite 0.75s;
+  animation: shrink 0.75s infinite;
+  transform: translateY(-1px);
 }
 .loader .loading-text {
   font-size: 1.5rem;
   position: relative;
-  margin: 10px;
+  margin: 3px;
 }
 .loader .loading-text::before {
   content: attr(data-content);
@@ -705,7 +706,7 @@ h1 {
   height: 100%;
   color: #ff79da;
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-  animation: reveal-box 1.5s infinite;
+  animation: reveal-box 1.5s infinite 0.75s;
 }
 @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
   .loader .loading-text::before {
@@ -719,14 +720,14 @@ h1 {
   40%, 50% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
-  75%, 100% {
+  80%, 100% {
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   }
 }
-@keyframes grow-and-shrink {
-  50% {
+@keyframes shrink {
+  100% {
     background-color: #9356dc;
-    transform: scale(0.3);
+    transform: scale(0.5);
   }
 }
 

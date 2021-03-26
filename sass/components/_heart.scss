@@ -25,14 +25,14 @@
       @include mixins.text-main-gradient();
       color: variables.$color-secondary;
       font-weight: 900;
-      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-      animation: fill 0.7s forwards;
+      transform: scale(0);
+      animation: fill 0.3s forwards cubic-bezier(.20,.1,.55,1.54);
     }
   }
 }
 
 @keyframes fill {
   to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1);
   }
 }
