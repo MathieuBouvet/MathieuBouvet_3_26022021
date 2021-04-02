@@ -469,6 +469,7 @@ h1 {
   margin-left: 11px;
   box-shadow: 0 5px 15px -5px rgba(68, 68, 68, 0.2);
   padding: 12px 0;
+  transition: background-color 0.5s;
 }
 .operation > * {
   margin-left: 12.5px;
@@ -725,7 +726,7 @@ h1 {
   margin: auto;
   display: block;
   border-radius: 50%;
-  animation: shrink 0.75s infinite;
+  animation: pulse 0.75s infinite;
   transform: translateY(-1px);
 }
 .loader .loading-text {
@@ -758,8 +759,8 @@ h1 {
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   }
 }
-@keyframes shrink {
-  100% {
+@keyframes pulse {
+  to {
     background-color: #9356dc;
     transform: scale(0.5);
   }

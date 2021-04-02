@@ -13,6 +13,7 @@ $badgeSizeTablet: 32px;
   @include mixins.card-shadow;
   @include mixins.children-gap-horizontal(25px);
   padding: 12px 0;
+  transition: background-color 0.5s;
 
   .operation-index {
     width: $badgeSize;

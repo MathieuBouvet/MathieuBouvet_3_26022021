@@ -13,7 +13,7 @@ $loader-size: 15px;
     margin: auto;
     display: block;
     border-radius: 50%;
-    animation: shrink 0.75s infinite;
+    animation: pulse 0.75s infinite;
     transform: translateY(-1px);
   }
   .loading-text {
@@ -42,8 +42,8 @@ $loader-size: 15px;
   }
 }
 
-@keyframes shrink {
-  100% {
+@keyframes pulse {
+  to {
     background-color: variables.$color-primary;
     transform: scale(0.5);
   }
