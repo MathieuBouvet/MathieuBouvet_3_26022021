@@ -658,9 +658,6 @@ h1 {
   justify-content: center;
   height: 100%;
 }
-.dish .dish-selection-marker i {
-  transform: rotate(-90deg);
-}
 .dish:hover .dish-selection-marker-container {
   width: 65px;
 }
