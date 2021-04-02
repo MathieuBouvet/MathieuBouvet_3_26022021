@@ -1,6 +1,13 @@
 @use "../variables";
 @use "../mixins";
 
+@keyframes dish-appearance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .dish {
   @include mixins.card-shadow();
   background-color: white;
@@ -8,6 +15,9 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(45px);
 
   .dish-title {
     overflow: hidden;
@@ -48,6 +58,12 @@
   &:hover {
     .dish-selection-marker {
       width: 65px;
+    }
+  }
+
+  @for $i from 0 to 4 {
+    &.delayed-appearance-#{$i} {
+      animation: dish-appearance 1s #{$i*150}ms forwards;
     }
   }
 }

@@ -596,6 +596,12 @@ h1 {
     width: 285px;
   }
 }
+@keyframes dish-appearance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .dish {
   box-shadow: 0 5px 15px -5px rgba(68, 68, 68, 0.2);
   background-color: white;
@@ -603,6 +609,8 @@ h1 {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(45px);
 }
 .dish .dish-title {
   overflow: hidden;
@@ -641,6 +649,18 @@ h1 {
 }
 .dish:hover .dish-selection-marker {
   width: 65px;
+}
+.dish.delayed-appearance-0 {
+  animation: dish-appearance 1s 0ms forwards;
+}
+.dish.delayed-appearance-1 {
+  animation: dish-appearance 1s 150ms forwards;
+}
+.dish.delayed-appearance-2 {
+  animation: dish-appearance 1s 300ms forwards;
+}
+.dish.delayed-appearance-3 {
+  animation: dish-appearance 1s 450ms forwards;
 }
 
 .heart-container {
