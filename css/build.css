@@ -602,6 +602,11 @@ h1 {
     transform: translateY(0);
   }
 }
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .dish {
   box-shadow: 0 5px 15px -5px rgba(68, 68, 68, 0.2);
   background-color: white;
@@ -637,18 +642,30 @@ h1 {
   font-weight: bold;
   margin-left: 10px;
 }
-.dish .dish-selection-marker {
+.dish .dish-selection-marker-container {
   flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #99e2d0;
   color: white;
   width: 0;
   font-size: 1.1rem;
+  transition: width 0.5s;
+  overflow: hidden;
 }
-.dish:hover .dish-selection-marker {
+.dish .dish-selection-marker {
   width: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.dish .dish-selection-marker i {
+  transform: rotate(-90deg);
+}
+.dish:hover .dish-selection-marker-container {
+  width: 65px;
+}
+.dish:hover .dish-selection-marker-container i {
+  animation: rotation 0.5s forwards;
 }
 .dish.delayed-appearance-0 {
   animation: dish-appearance 1s 0ms forwards;

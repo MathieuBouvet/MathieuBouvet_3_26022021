@@ -8,6 +8,15 @@
   }
 }
 
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+$dish-appearance-base-delay: 150;
+$check-marker-transition-duration: 0.5s;
+
 .dish {
   @include mixins.card-shadow();
   background-color: white;
@@ -44,26 +53,45 @@
     font-weight: bold;
     margin-left: 10px;
   }
-  .dish-selection-marker {
+  .dish-selection-marker-container {
     flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: variables.$color-tertiary;
     color: white;
     width: 0;
     font-size: 1.1rem;
+    transition: width $check-marker-transition-duration;
+    overflow: hidden;
   }
 
-  &:hover {
-    .dish-selection-marker {
-      width: 65px;
+  .dish-selection-marker {
+    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    i {
+      transform: rotate(-90deg);
     }
   }
 
+  &:hover {
+    .dish-selection-marker-container {
+      width: 65px;
+      i {
+        animation: rotation $check-marker-transition-duration forwards;
+      }
+    }
+  }
+
+  // generate delayed animation classes (only 4 because this is the maximum number of dish per dish type)
   @for $i from 0 to 4 {
     &.delayed-appearance-#{$i} {
-      animation: dish-appearance 1s #{$i*150}ms forwards;
+      animation: dish-appearance
+        1s
+        #{$i *
+        $dish-appearance-base-delay}ms
+        forwards;
     }
   }
 }
