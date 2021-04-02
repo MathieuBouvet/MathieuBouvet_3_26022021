@@ -29,6 +29,7 @@
       background-repeat: no-repeat;
     }
   }
+  // Generate classes to get the matching restaurant image
   @each $name in variables.$restaurant-names {
     .restaurant-img-#{$name}::before {
       background-image: url("../images/#{$name}-medium.jpg");

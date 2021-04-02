@@ -16,7 +16,7 @@ $end-offset: 100%;
   background: linear-gradient(
     $gradient-orientation,
     lighten(variables.$color-primary, 3%) $start-offset,
-    lighten(variables.$color-secondary, 3%) $end-offset,
+    lighten(variables.$color-secondary, 3%) $end-offset
   );
 }
 
@@ -30,6 +30,7 @@ $end-offset: 100%;
   box-shadow: 0 5px 15px -5px rgba(variables.$color-lighter-dark, 0.2);
 }
 
+// Helper to add a horizontal gap between children
 @mixin children-gap-horizontal($gap) {
   & > * {
     margin-left: $gap/2;
@@ -43,6 +44,8 @@ $end-offset: 100%;
   }
 }
 
+// Helper to add a vertical gap between children.
+// Warning : Due to margin collapsing on non flex items, $gap represent the half of the desired gap.
 @mixin children-gap-vertical($gap) {
   & > * {
     margin-top: $gap/2;
@@ -56,6 +59,7 @@ $end-offset: 100%;
   }
 }
 
+// Cancel children gaps. Used to reset gaps for responsive design
 @mixin children-no-gap() {
   & > * {
     margin-top: 0;
@@ -82,6 +86,8 @@ $end-offset: 100%;
   }
 }
 
+// Will apply to screens with a tablet like width and further
+// It is handy because desktop styles do not need to override tablet styles for the most part
 @mixin at-least-tablet() {
   @media screen and (min-width: map-get(variables.$breakpoints, tablet)) {
     @content;
@@ -100,6 +106,7 @@ $end-offset: 100%;
   }
 }
 
+// Helper for a gradient colored text, if supported by the browser
 @mixin text-main-gradient() {
   @supports (-webkit-background-clip: text) and
     (-webkit-text-fill-color: transparent) {
